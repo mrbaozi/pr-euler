@@ -1,5 +1,7 @@
+from math import sqrt
+
 def is_prime(n):
-    if (n < 1):
+    if (n <= 1):
         return False
     if (n <= 3):
         return True
@@ -27,3 +29,13 @@ def factorial(n):
 
 def binomial(n, k):
     return int(factorial(n)/(factorial(k)*factorial(n-k)))
+
+def proper_divisors(n):
+    s = 1
+    t = sqrt(n)
+    for i in range(2, int(t) + 1):
+        if n % i == 0:
+            s += i + n/i
+    if t == int(t):
+        s -= t
+    return s

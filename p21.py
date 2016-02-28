@@ -1,9 +1,4 @@
-def proper_divisors(n):
-    sum = 0
-    for i in range(1, int(n/2) + 1):
-        if n%i == 0:
-            sum += i
-    return sum
+from projecteuler_util import proper_divisors
 
 amicable_numbers = []
 for n in range(10000):
