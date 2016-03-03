@@ -5,7 +5,7 @@ def is_palindrome(s):
     return True
 
 solution = 0
-for i in range(1000000):
+for i in range(1, 1000000, 2):
     if is_palindrome(str(i)) and is_palindrome(str(bin(i))[2:]):
             print(i)
             solution += i
